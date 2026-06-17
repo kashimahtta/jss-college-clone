@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSS College Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JSS College Clone</h1>
+      <p>find me !!</p>
+    </header>
+
+    <div class="disclaimer-overlay" id="disclaimerOverlay">
+      <div class="disclaimer-card">
+        <h2>Disclaimer</h2>
+        <p>
+          This project is a front-end clone of an existing college website,
+          developed as part of my learning and practice in web development. The
+          main objective of this project is to understand how real-world
+          websites are structured, designed, and implemented using modern web
+          technologies. It includes essential sections such as Home, About,
+          Courses, Faculty, and Contact, all organized in a clean, responsive,
+          and user-friendly layout. Through this project, I focused on improving
+          my skills in HTML, CSS, and JavaScript, along with concepts like
+          responsive design, layout structuring, and user interface development.
+          This clone is created purely for educational purposes to gain hands-on
+          experience in building real-world projects, and it does not intend to
+          copy or misuse any original content. The project reflects my ability
+          to recreate and understand professional website designs while
+          continuously enhancing my development skills.
+        </p>
+        <div class="disclaimer-actions">
+          <button id="continueButton">Continue</button>
+          <button id="cancelButton">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer-overlay hidden" id="choiceOverlay">
+      <div class="disclaimer-card">
+        <h2>Next Step</h2>
+        <p>What would you like to do next?</p>
+        <div class="disclaimer-actions">
+          <button id="findButton">Find someone</button>
+          <button id="addButton">Add data for someone</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer-overlay hidden" id="findOverlay">
+      <div class="disclaimer-card">
+        <h2>Find Someone</h2>
+        <p>
+          Choose teacher or student and enter their name to see their block
+          location.
+        </p>
+        <div class="add-form">
+          <label>
+            Category
+            <select id="findRole">
+              <option value="" disabled selected>Select category</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Student">Student</option>
+            </select>
+          </label>
+          <label>
+            Name
+            <input
+              id="findName"
+              type="text"
+              placeholder="Search by teacher or student name"
+            />
+          </label>
+          <button id="submitFindButton">Search</button>
+          <p id="findResult" class="find-result"></p>
+          <div class="disclaimer-actions">
+            <button id="backFromFindButton" class="secondary">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer-overlay hidden" id="addOverlay">
+      <div class="disclaimer-card">
+        <h2>Okay add the details</h2>
+        <p>
+          Use the five block forms below to add a teacher or student and
+          optional building details.
+        </p>
+        <div id="addBlockForms" class="block-add-grid"></div>
+        <div class="disclaimer-actions">
+          <button id="backToChoiceButton" class="secondary">Back</button>
+        </div>
+      </div>
+    </div>
+
+    <main class="hidden">
+      <section class="blocks-section">
+        <h2>Academic Blocks</h2>
+        <div class="blocks-grid" id="blocksGrid"></div>
+      </section>
+
+      <section class="assignments-section">
+        <div class="assignment-panel">
+          <h2>Teachers</h2>
+          <ul id="teacherList" class="entity-list"></ul>
+        </div>
+        <div class="assignment-panel">
+          <h2>Students</h2>
+          <ul id="studentList" class="entity-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
